@@ -31,7 +31,7 @@ jobs:
         # перейти в папку, содержащую manage.py - <корневая_папка>/<папка_проекта>/manage.py
         # cd infra_project/
         # запустить написанные разработчиком тесты
-        pytest
+        # pytest
 
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
