@@ -15,8 +15,6 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python3 -m venv venv
-        . venv/bin/activate
         python -m pip install --upgrade pip 
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
         pip install -r requirements.txt 
@@ -25,7 +23,7 @@ jobs:
       env: 
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: |
-        flake8
+        python -m flake8
         pytest
 
   build_and_push_to_docker_hub:
