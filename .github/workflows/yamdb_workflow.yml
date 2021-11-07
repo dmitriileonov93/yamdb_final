@@ -58,9 +58,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final
             sudo docker-compose stop
             sudo docker-compose rm web
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final
             sudo touch .env 
             echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
             echo EMAIL_HOST_USER=${{ secrets.EMAIL_HOST_USER }} >> .env
