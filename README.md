@@ -1,8 +1,10 @@
-![my workflow](https://github.com/dmitriileonov93/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![yamdb_final workflow](https://github.com/dmitriileonov93/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 API YAMDB - API-приложение для обсуждений разных произведений.
 
-Как запустить проект:
+Готовый проект: 84.252.142.100
+
+Как запустить проект на своем сервере:
 1. Для загрузки введите в командную строку: "docker pull dimaleonov93/yamdb_final"
 2. Остановите все существующие контейнеры: "sudo docker-compose stop"
                                            "sudo docker-compose rm web"
