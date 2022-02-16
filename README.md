@@ -1,17 +1,45 @@
 ![yamdb_final workflow](https://github.com/dmitriileonov93/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+### Описание
 API YAMDB - API-приложение для обсуждений разных произведений.
 
 Готовый проект: 84.252.142.100
 
-Как запустить проект на своем сервере:
-1. Для загрузки введите в командную строку: "docker pull dimaleonov93/yamdb_final"
-2. Остановите все существующие контейнеры: "sudo docker-compose stop"
-                                           "sudo docker-compose rm web"
-3. Создайте файл .env для переменных окружения: "touch .env"
-4. Добайте в этот файл переменные окруженмя: "echo <ПЕРЕМЕННАЯ>=<значение> >> .env"
-5. Запуск приложения: терминале выполнить команду "docker-compose up -d"
-6. Применить миграции: "docker-compose exec web python manage.py migrate --noinput"
-7. Создать суперпользователя: "docker-compose exec web python manage.py createsuperuser"
-8. Собрать статику: "docker-compose exec web python manage.py collectstatic --no-input"
-9. Заполнение БД тестовыми данными: "docker-compose exec web python manage.py loaddata fixtures.json"
+### Запуск проекта
+- Для загрузки введите в командную строку:
+```
+docker pull dimaleonov93/yamdb_final
+```
+- Остановите все существующие контейнеры:
+```
+docker-compose stop
+docker-compose rm web
+```
+- Создайте файл .env для переменных окружения:
+```
+touch .env
+```
+- Добайте в этот файл переменные окруженмя:
+```
+echo <ПЕРЕМЕННАЯ>=<значение> >> .env
+```
+- Запуск приложения:
+```
+docker-compose up -d
+```
+- Применить миграции:
+```
+docker-compose exec web python manage.py migrate --noinput
+```
+- Создать суперпользователя:
+```
+docker-compose exec web python manage.py createsuperuser
+```
+- Собрать статику:
+```
+docker-compose exec web python manage.py collectstatic --no-input
+```
+- Заполнение БД тестовыми данными:
+```
+docker-compose exec web python manage.py loaddata fixtures.json
+```
