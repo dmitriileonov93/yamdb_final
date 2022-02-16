@@ -8,14 +8,14 @@ API YAMDB - API-приложение для обсуждений разных п
 ### Запуск проекта
 - Для загрузки введите в командную строку:
 ```
-docker pull dimaleonov93/yamdb_final
+docker clone https://github.com/dmitriileonov93/yamdb_final.git
 ```
 - Остановите все существующие контейнеры:
 ```
 docker-compose stop
 docker-compose rm web
 ```
-- Создайте файл .env для переменных окружения:
+- Создайте файл .env для переменных окружения в корневой папке проекта:
 ```
 touch .env
 ```
